@@ -52,18 +52,12 @@ public class SecurityConfig {
                 /*
                  * CSRF protection remains ENABLED.
                  *
-                 * Registration and login are public and therefore
-                 * excluded from CSRF protection.
-                 *
-                 * Authenticated contact mutations remain protected.
+                 * Authentication endpoints are public through
+                 * permitAll(), but they remain protected by CSRF.
                  */
                 .csrf(csrf -> csrf
                         .csrfTokenRepository(csrfTokenRepository)
                         .csrfTokenRequestHandler(csrfRequestHandler)
-                        .ignoringRequestMatchers(
-                                "/api/v1/auth/register",
-                                "/api/v1/auth/login"
-                        )
                 )
 
                 /*

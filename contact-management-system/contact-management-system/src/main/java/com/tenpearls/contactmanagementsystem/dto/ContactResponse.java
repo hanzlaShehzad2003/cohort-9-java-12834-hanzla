@@ -17,9 +17,11 @@ public class ContactResponse {
 
     private String email;
 
+    private String emailType;
+
     private String phoneNumber;
 
+    private String phoneType;
+
     private Boolean favorite;
-
-
 }

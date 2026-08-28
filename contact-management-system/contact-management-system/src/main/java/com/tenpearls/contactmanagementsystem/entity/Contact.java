@@ -28,7 +28,15 @@ public class Contact extends BaseEntity {
     private String email;
 
     @Column(nullable = false)
+    @Builder.Default
+    private String emailType = "Personal";
+
+    @Column(nullable = false)
     private String phoneNumber;
+
+    @Column(nullable = false)
+    @Builder.Default
+    private String phoneType = "Personal";
 
     @Column(nullable = false)
     @Builder.Default

@@ -59,7 +59,9 @@ public class ContactService {
                 .lastName(request.getLastName())
                 .title(request.getTitle())
                 .email(request.getEmail())
+                .emailType(request.getEmailType())
                 .phoneNumber(request.getPhoneNumber())
+                .phoneType(request.getPhoneType())
                 .favorite(Boolean.TRUE.equals(request.getFavorite()))
                 .user(user)
                 .build();
@@ -147,7 +149,9 @@ public class ContactService {
         contact.setLastName(request.getLastName());
         contact.setTitle(request.getTitle());
         contact.setEmail(request.getEmail());
+        contact.setEmailType(request.getEmailType());
         contact.setPhoneNumber(request.getPhoneNumber());
+        contact.setPhoneType(request.getPhoneType());
 
         if (request.getFavorite() != null) {
             contact.setFavorite(request.getFavorite());
@@ -248,7 +252,9 @@ public class ContactService {
                 .lastName(contact.getLastName())
                 .title(contact.getTitle())
                 .email(contact.getEmail())
+                .emailType(contact.getEmailType())
                 .phoneNumber(contact.getPhoneNumber())
+                .phoneType(contact.getPhoneType())
                 .favorite(contact.getFavorite())
                 .build();
     }
